@@ -135,13 +135,11 @@ def start_server() :
     
     except Exception as e :
         print("exception: ", e)
+        time.sleep(5)
+        machine.reset()
         pass
-        server.close()
-        connect_to_wlan(0)
-        start_server() #this take a while, until clients can connect the webserver (Errno 98 ip in use).
-                       #After around 30 Tryings, the server get online again.
-    
-start_server()
+       
+    start_server()
   
 
 
