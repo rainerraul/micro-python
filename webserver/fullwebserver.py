@@ -7,8 +7,8 @@ import time
 import os
 import re
 
-ssid = "#######"
-password = "#######"
+ssid = "kellerbereich"
+password = "54826106"
 
 adc0 = machine.ADC(machine.Pin(26))
 
@@ -47,7 +47,7 @@ def connect_to_wlan(on, ssid = None, password = None) :
                 wait += 1
         
                 if (wait == 10) :
-                    print("keine Verbindung!!")
+                    print("can not connect!!")
                     return False
                 time.sleep(1)
         
@@ -99,38 +99,48 @@ def handle_requests(req, maxpairs) :
 def start_server() :
        
     if(connect_to_wlan(1, ssid, password)) :
-        print("verbunden!!")
+        print("connected!!")
     
-    addr = socket.getaddrinfo("0.0.0.0", 80)[0][-1]
-    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server.bind(addr)
-    server.listen(1)
+    try :
+        addr = socket.getaddrinfo("0.0.0.0", 80)[0][-1]
+        server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server.bind(addr)
+        server.listen(1)
     
-    while True :
-        response = ""
-        cl, addr = server.accept()
-        request = cl.recv(1024)
-        request = str(request)
+        while True :
+            response = ""
+            cl, addr = server.accept()
+            request = cl.recv(1024)
+            request = str(request)
                    
-        file, k, v = handle_requests(request, 5)
+            file, k, v = handle_requests(request, 5)
             
-        if(file[1] == "index.html") :
-            print(k)
-            print(v)
-            print(file[1])
-            adc0value = ((adc0.read_u16() & 0xFFFF) / 65536) * 3.33
-            response = html % (adc0value)
+            if(file[1] == "index.html") :
+                print(k)
+                print(v)
+                print(file[1])
+                adc0value = ((adc0.read_u16() & 0xFFFF) / 65536) * 3.33
+                response = html % (adc0value)
         
-        elif(file[1] == "postdata.html") :
-            print(k)
-            print(v)
-            print(file[1])
-            response = posthtml % (k[0], v[0], k[1], v[1])
+            elif(file[1] == "postdata.html") :
+                print(k)
+                print(v)
+                print(file[1])
+                response = posthtml % (k[0], v[0], k[1], v[1])
       
-        cl.send("HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n")
-        cl.send(response)
-        cl.close()
+            cl.send("HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n")
+            cl.send(response)
+            cl.close()
+    
+    except socket.error as e :
+        print(e.message, e.args)
+        server.close()
+        start_server()
+        pass
         
+    finally :
+        server.close
+
 try :        
     start_server()
 
