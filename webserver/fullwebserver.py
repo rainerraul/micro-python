@@ -7,8 +7,8 @@ import time
 import os
 import re
 
-ssid = "#########"
-password = "##########"
+ssid = "kellerbereich"
+password = "54826106"
 
 adc0 = machine.ADC(machine.Pin(26))
 
@@ -55,6 +55,7 @@ def connect_to_wlan(on, ssid = None, password = None) :
 
     elif(on == 0) :
         wlan.disconnect()
+        wlan.active(on)
         return False
     
 def handle_requests(req, maxpairs) :
@@ -106,7 +107,7 @@ def start_server() :
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server.bind(addr)
         server.listen(1)
-    
+        
         while True :
             response = ""
             cl, addr = server.accept()
@@ -132,28 +133,21 @@ def start_server() :
             cl.send(response)
             cl.close()
     
-    except socket.error as e :
-        print(e.message, e.args)
-        server.close()
-        start_server()
+    except Exception as e :
+        print("exception: ", e)
         pass
-        
+        server.close()
+        connect_to_wlan(0)
+        start_server() #this take a while until clients can connect webserver (Errno 98 ip in use).
+                       #After around 30 Tryings, the server get online again.
+    
     finally :
         server.close
-
-try :        
-    start_server()
-
-except OSError :
-    print("Error!!")
-    connect_to_wlan(0)
-    time.sleep(0.5)
-    if(connect_to_wlan(1, ssid, password)) :
-        print("reconnected!!")
-    start_server()
-    pass
+        connect_to_wlan(0)
+        #machine.reset()
     
-    
+start_server()
+  
 
 
 
