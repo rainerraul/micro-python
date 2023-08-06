@@ -141,11 +141,6 @@ def start_server() :
         start_server() #this take a while, until clients can connect the webserver (Errno 98 ip in use).
                        #After around 30 Tryings, the server get online again.
     
-    finally :
-        server.close
-        connect_to_wlan(0)
-        #machine.reset()
-    
 start_server()
   
 
