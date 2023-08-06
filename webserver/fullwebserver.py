@@ -7,8 +7,8 @@ import time
 import os
 import re
 
-ssid = "kellerbereich"
-password = "54826106"
+ssid = "#######"
+password = "#######"
 
 adc0 = machine.ADC(machine.Pin(26))
 
