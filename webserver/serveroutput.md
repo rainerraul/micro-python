@@ -1,8 +1,8 @@
 
 
-['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-index.html <br> <br>
+keys ['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+values ['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+serverfile index.html <br> <br>
 ['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
 ['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
 index.html <br> <br>
