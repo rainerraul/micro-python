@@ -1,9 +1,14 @@
 # micropython
+<!DOCTYPE html>
 <html>
-  <head><title>Notes</title></head><body>
-.defs {
-  background-color: blue
-}
+  <head>
+  <style>
+    .defs {
+  background-color: blue;
+  }
+  </style>
+  </head>
+  <body>
 <h3>Examples for pico W esp32 esp8266</h3>
 <b>05 08 2023</b><br>
 This is a full webserver example, what can handle post and get requests, within extracting the requeststring from client in key-value Params. In addition you have to send a dummy key-value pair, because the last parameter will not be evaluated. 
