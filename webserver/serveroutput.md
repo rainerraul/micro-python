@@ -1,70 +1,28 @@
 
 
-['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-index.html
-['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-index.html
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-postdata.html
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-postdata.html
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-postdata.html
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-postdata.html
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-postdata.html
-[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-postdata.html
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-postdata.html
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-postdata.html
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-postdata.html
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-postdata.html
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-postdata.html
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-postdata.html
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-postdata.html
-[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-index.html
-[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-index.html
-['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-index.html
-['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-index.html
-['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-index.html
-['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-index.html
-['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-index.html
+['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+index.html <br> <br>
+['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+index.html <br> <br>
+['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+postdata.html <br> <br>
+['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+postdata.html <br> <br>
+['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+postdata.html <br> <br>
+['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+postdata.html <br> <br>
+['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+postdata.html <br> <br>
+[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
+index.html <br> <br>
 
 exception:  [Errno 98] EADDRINUSE
