@@ -5,9 +5,10 @@ import socket
 import network
 import time
 import os
+import re
 
-ssid = "#######"
-password = "#######"
+ssid = "kellerbereich"
+password = "54826106"
 
 adc0 = machine.ADC(machine.Pin(26))
 
@@ -33,25 +34,29 @@ posthtml = """
 </body></html>
 """
 
-def connect_to_wlan(ssid, password, on) :
+def connect_to_wlan(on, ssid = None, password = None) :
     global wait
     wait = 0
         
     wlan = network.WLAN(network.STA_IF)
-    wlan.active(on)
-    wlan.connect(ssid, password)
-        
-    while (wlan.status() != 3) :
-        wait += 1
-        
-        if (wait == 10) :
-            print("keine Verbindung!!")
-            return False
-        time.sleep(1)
-        
-    return True, wlan.ifconfig()
+    if(on == 1) :
+        wlan.active(on)
+        wlan.connect(ssid, password)
 
+        while (wlan.status() != 3) :
+                wait += 1
+        
+                if (wait == 10) :
+                    print("keine Verbindung!!")
+                    return False
+                time.sleep(1)
+        
+        return True, wlan.ifconfig()
 
+    elif(on == 0) :
+        wlan.disconnect()
+        return False
+    
 def handle_requests(req, maxpairs) :
     
     key = [" "] * maxpairs * 2
@@ -93,7 +98,7 @@ def handle_requests(req, maxpairs) :
 
 def start_server() :
        
-    if(connect_to_wlan(ssid, password, 1)) :
+    if(connect_to_wlan(1, ssid, password)) :
         print("verbunden!!")
     
     addr = socket.getaddrinfo("0.0.0.0", 80)[0][-1]
@@ -131,7 +136,10 @@ try :
 
 except OSError :
     print("Error!!")
-    connect_to_wlan("", "", 0)
+    connect_to_wlan(0)
+    time.sleep(0.5)
+    if(connect_to_wlan(1, ssid, password)) :
+        print("reconnected!!")
     start_server()
     pass
     
