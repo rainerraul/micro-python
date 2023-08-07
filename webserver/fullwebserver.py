@@ -60,8 +60,8 @@ def connect_to_wlan(on, ssid = None, password = None) :
     
 def handle_requests(req, maxpairs) :
     
-    key = [" "] * maxpairs * 2
-    value = [" "] * maxpairs * 2
+    key = [" "] * maxpairs
+    value = [" "] * maxpairs
     keyvalues = [" "] * maxpairs
     
     getdata = ""
