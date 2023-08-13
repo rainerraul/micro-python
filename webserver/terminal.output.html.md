@@ -1,25 +1,25 @@
 MPY: soft reboot
 connected!!
 
-[' ', ' ', ' ', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ']
-index.html
+[' ', ' ', ' ', ' ', ' ']<br>
+[' ', ' ', ' ', ' ', ' ']<br>
+index.html<br><br>
 
 
-['hallo', 'bebasen', 'cvdaden', ' ', ' ']
-['dusen', 'sdfast', 'wqasenw', ' ', ' ']
-index.html
+['hallo', 'bebasen', 'cvdaden', ' ', ' ']<br>
+['dusen', 'sdfast', 'wqasenw', ' ', ' ']<br>
+index.html<br><br>
 
 
-[' ', ' ', ' ', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ']
-scan.html
+[' ', ' ', ' ', ' ', ' ']<br>
+[' ', ' ', ' ', ' ', ' ']<br>
+scan.html<br>
 
-Serveraddress: 192.168.178.32
-Netmask: 255.255.255.0
-Gateway: 192.168.178.1
-Clientaddress: 192.168.178.63
+Serveraddress: 192.168.178.32<br>
+Netmask: 255.255.255.0<br>
+Gateway: 192.168.178.1<br>
+Clientaddress: 192.168.178.63<br><br>
 
-['test', 'value', ' ', ' ', ' ']
-['start', 'contentergeben', ' ', ' ', ' ']
-postdata.html
+['test', 'value', ' ', ' ', ' ']<br>
+['start', 'contentergeben', ' ', ' ', ' ']<br>
+postdata.html<br>
