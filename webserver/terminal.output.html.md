@@ -1,28 +1,25 @@
+MPY: soft reboot
+connected!!
+
+[' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ']
+index.html
 
 
-keys ['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-values ['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-serverfile index.html <br> <br>
-['hallo', 'bebasen', 'cvdaden', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-['dusen', 'sdfast', 'wqasenw', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-index.html <br> <br>
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-postdata.html <br> <br>
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-postdata.html <br> <br>
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-postdata.html <br> <br>
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-postdata.html <br> <br>
-['test', 'value', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-['start', 'content', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-postdata.html <br> <br>
-[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] <br>
-index.html <br> <br>
+['hallo', 'bebasen', 'cvdaden', ' ', ' ']
+['dusen', 'sdfast', 'wqasenw', ' ', ' ']
+index.html
 
-exception:  [Errno 98] EADDRINUSE
+
+[' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ']
+scan.html
+
+Serveraddress: 192.168.178.32
+Netmask: 255.255.255.0
+Gateway: 192.168.178.1
+Clientaddress: 192.168.178.63
+
+['test', 'value', ' ', ' ', ' ']
+['start', 'contentergeben', ' ', ' ', ' ']
+postdata.html
