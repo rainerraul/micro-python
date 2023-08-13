@@ -47,8 +47,6 @@ scanhtml = """
 </body></html>
 """
 
-
-
 def connect_to_wlan(on=None, ssid=None, password=None):
     global wait
     wait = 0
