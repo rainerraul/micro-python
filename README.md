@@ -8,4 +8,4 @@ I have added a Parameter called <strong>on</strong> in function <strong>connect_
 <br><br>
 <b>13 08 2023</b><br>
 Created a website (scan.html) containing the scanresult of infrastructure network stations and the own connection data, like serveraddress, netmask and routeraddress. The function <strong>connect_to_wlan</strong> scan also incidentally the enviroment of possible network stations. The indexfile displays the voltages, coming from the three adc channels, attached on pin26-pin28 (raspberry pico W).
-    <br><br>
+ <br><br>
