@@ -12,6 +12,6 @@ This is a full webserver example, what can handle post and get requests, within 
 I have added a Parameter called <strong>on</strong> in function <strong>connect_to_wlan</strong> for connecting, reconnecting and disconnecting to wlan.
 <br><br>
 <b>13 08 2023</b>
-Created a website containing the scanresult of infrastructure network stations and the own connection data, like serveraddress, netmask and Routeraddress. 
+Created a website containing the scanresult of infrastructure network stations and the own connection data, like serveraddress, netmask and Routeraddress. The function <strong>connect_to_wlan</strong> scan also incidentally the enviroment of possible network stations.<br><br>
   </body>
 </html>
