@@ -172,6 +172,10 @@ def start_server():
                 response = html % (adc0value, adc1value, adc2value)
 
             elif (file[1] == "mcu.html"):
+
+                if(v[0] == "+"):
+                    v[0] = "0"
+                
                 print()
                 print(k)
                 print(v)
@@ -208,10 +212,7 @@ def start_server():
                         pinvalue = pin[int(v[0])].value()
 
                     print(pinvalue)
-                
-                if(v[0] == ""):
-                    v[0] = "0"
-                    
+                                  
                 response = mcuhtml % (v[0], ch0, ch1, colorstate, v[0], pinvalue)
             
             elif file[1] == "scan.html":
