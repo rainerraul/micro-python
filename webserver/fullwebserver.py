@@ -6,8 +6,8 @@ import network
 import time
 import os
 
-ssid = "#######"
-password = "#######"
+ssid = "kellerbereich"
+password = "54826106"
 
 adc0 = machine.ADC(machine.Pin(26))
 adc1 = machine.ADC(machine.Pin(27))
@@ -132,8 +132,7 @@ def start_server():
     scanresult = ""
     scantable = ""
     pinvalue = 0
-    pin = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34,
-           35, 36, 37, 38, 39, 100]
+    pin = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
     
     ch0 = "checked"
     ch1 = ""
@@ -181,18 +180,18 @@ def start_server():
                 
                 if (v[2] == "write"):
                     if v[0] == "LED":
-                        pin[39] = machine.Pin(v[0], machine.Pin.OUT)
+                        pin[29] = machine.Pin(v[0], machine.Pin.OUT)
                         if (v[1] == "0"):
-                            pin[39].value(int(v[1]))
+                            pin[29].value(int(v[1]))
                             ch0 = "checked"
                             ch1 = ""
                             colorstate = "red"
                         elif (v[1] == "1"):
-                            pin[39].value(int(v[1]))
+                            pin[29].value(int(v[1]))
                             ch0 = ""
                             ch1 = "checked"
                             colorstate = "lime"
-                        pinvalue = pin[39].value()
+                        pinvalue = pin[29].value()
                         
                     else:
                         pin[int(v[0])] = machine.Pin(int(v[0]), machine.Pin.OUT)
