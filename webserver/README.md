@@ -10,6 +10,6 @@ I have added a Parameter called <strong>on</strong> in function <strong>connect_
 Created a website <b>(scan.html)</b> containing the scanresult of infrastructure network stations and the own connection data, like serveraddress, netmask and routeraddress. The function <strong>connect_to_wlan</strong> scan also incidentally the enviroment of possible network stations. The indexfile displays the voltages, coming from the three adc channels, attached on pin26-pin28 (raspberry pico W).
 <br><br>
 <b>14 08 2023</b><br>
-Create a website <b>mcu.html</b>, to access the GPIO Pins for writing and reading of there state levels and the GPIO0, where the builtin LED of raspberry pico W is connected, too. Only the range between Pin0-Pin29 is allowed and the "LED"-string.
+Create a website <b>mcu.html</b>, to access the GPIO Pins for writing and reading of there state levels and the GPIO0, where the builtin LED of raspberry pico W is connected, too. Only the range between Pin0-Pin28 is allowed and the "LED"-string.
 <br><br>
 
