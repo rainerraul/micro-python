@@ -6,8 +6,8 @@ import network
 import time
 import os
 
-ssid = "########"
-password = "########"
+ssid = "kellerbereich"
+password = "54826106"
 
 adc0 = machine.ADC(machine.Pin(26))
 adc1 = machine.ADC(machine.Pin(27))
@@ -23,17 +23,20 @@ html = """<!DOCTYPE html>
 </body>
 </html>
 """
-posthtml = """
-<html><head><title>post test</title></head><body>
-<h3>Testdata Post</h3>
-<form method='post' action='postdata.html'>
-<input type='submit' name='test' value='start' />
-<input type='text' name='value' value='content' />
-<input type='hidden' name='dummy' value='test' />
-</form>
+mcuhtml = """
+<html><head><title>write gpio test</title></head><body>
+<h3>Write and read GPIO-Pins</h3>
+<form method='post' action='mcu.html'><table border='1'>
+<th>Pin</th><th>Choose</th><th>write</th><th>State</th><tr>
+<td><input type='text' size='5' name='pin' value='%s' /></td>
+<td>on<input type='radio' name='option' %s value='1' />
+off<input type='radio' name='option' %s value='0' /></td>
+<td><input type='submit' name='test' value='write' /></td>
+<td bgcolor='%s'><input type='hidden' name='dummy' value='test' />
+</td></tr></table></form>
 <table border='1'><th>key</th><th>value</th><tr>
 <td>%s</td><td>%s</td></tr>
-<tr><td>%s</td><td>%s</td></tr></table>
+</table>
 </body></html>
 """
 scanhtml = """
@@ -46,6 +49,8 @@ scanhtml = """
 <tr><td>Gateway</td><td>%s</td></tr>
 </body></html>
 """
+
+
 
 def connect_to_wlan(on=None, ssid=None, password=None):
     global wait
@@ -126,6 +131,13 @@ def start_server():
     config = 0
     scanresult = ""
     scantable = ""
+    pinvalue = 0
+    pin = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34,
+           35, 36, 37, 38, 39, 100]
+    
+    ch0 = "checked"
+    ch1 = ""
+    colorstate= "gray"
     
     status, config, scanresult = connect_to_wlan(1, ssid, password)
 
@@ -149,20 +161,59 @@ def start_server():
             file, k, v = handle_requests(request, 5)
 
             if file[1] == "index.html":
+                print()
                 print(k)
                 print(v)
                 print(file[1])
+                print()
                 adc0value = ((adc0.read_u16() & 0xFFFF) / 65536) * 3.33
                 adc1value = ((adc1.read_u16() & 0xFFFF) / 65536) * 3.33
                 adc2value = ((adc2.read_u16() & 0xFFFF) / 65536) * 3.33
                 
                 response = html % (adc0value, adc1value, adc2value)
 
-            elif file[1] == "postdata.html":
+            elif (file[1] == "mcu.html"):
+                print()
                 print(k)
                 print(v)
                 print(file[1])
-                response = posthtml % (k[0], v[0], k[1], v[1])
+                print()
+                
+                if (v[2] == "write"):
+                    if v[0] == "LED":
+                        pin[39] = machine.Pin(v[0], machine.Pin.OUT)
+                        if (v[1] == "0"):
+                            pin[39].value(int(v[1]))
+                            ch0 = "checked"
+                            ch1 = ""
+                            colorstate = "red"
+                        elif (v[1] == "1"):
+                            pin[39].value(int(v[1]))
+                            ch0 = ""
+                            ch1 = "checked"
+                            colorstate = "lime"
+                        pinvalue = pin[39].value()
+                        
+                    else:
+                        pin[int(v[0])] = machine.Pin(int(v[0]), machine.Pin.OUT)
+                        if (v[1] == "0"):
+                            pin[int(v[0])].value(int(v[1]))
+                            ch0 = "checked"
+                            ch1 = ""
+                            colorstate = "red"
+                        elif (v[1] == "1"):
+                            pin[int(v[0])].value(int(v[1]))
+                            ch0 = ""
+                            ch1 = "checked"
+                            colorstate = "lime"
+                        pinvalue = pin[int(v[0])].value()
+
+                    print(pinvalue)
+                
+                if(v[0] == ""):
+                    v[0] = "0"
+                    
+                response = mcuhtml % (v[0], ch0, ch1, colorstate, v[0], pinvalue)
             
             elif file[1] == "scan.html":
                 print()
