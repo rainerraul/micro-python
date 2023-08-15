@@ -5,8 +5,8 @@ import time
 import os
 import gc
 
-ssid = "#########"
-password = "##########"
+ssid = "kellerbereich"
+password = "54826106"
 
 adc0 = machine.ADC(machine.Pin(26))
 adc1 = machine.ADC(machine.Pin(27))
@@ -196,7 +196,7 @@ def start_server():
 
             file, k, v = handle_requests(request, 5)
 
-            if file[1] == "index.html":
+            if file[1] == "adc.html":
                 print()
                 print(k)
                 print(v)
@@ -205,8 +205,12 @@ def start_server():
                 adc0value = ((adc0.read_u16() & 0xFFFF) / 65536) * 3.33
                 adc1value = ((adc1.read_u16() & 0xFFFF) / 65536) * 3.33
                 adc2value = ((adc2.read_u16() & 0xFFFF) / 65536) * 3.33
-
+                
                 response = html % (adc0value, adc1value, adc2value)
+                
+                cl.send("HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n")
+                cl.send(response)
+                cl.close()
 
             elif file[1] == "mcu.html":
                 print()
@@ -250,7 +254,10 @@ def start_server():
                     print(pinvalue)
 
                 response = mcuhtml % (v[0], ch0, ch1, colorstate, v[0], pinvalue)
-
+                cl.send("HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n")
+                cl.send(response)
+                cl.close()
+            
             elif file[1] == "scan.html":
                 print()
                 print(k)
@@ -287,9 +294,14 @@ def start_server():
                 )
                 scantable = ""
 
-            cl.send("HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n")
-            cl.send(response)
-            cl.close()
+                cl.send("HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n")
+                cl.send(response)
+                cl.close()
+
+            else:
+                cl.send("HTTP/1.0 404 NOT FOUND\r\nContent-type: text/html\r\n\r\n")
+                cl.send("<html><head><title>Ressource nicht gefunden</title></head><body><h2>ERROR 404 NOT FOUND</h2></body></html>")
+                cl.close()
 
     except Exception as e:
         print("exception: ", e)
