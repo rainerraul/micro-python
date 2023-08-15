@@ -5,8 +5,8 @@ import time
 import os
 import gc
 
-ssid = "#########"
-password = "##########"
+ssid = "kellerbereich"
+password = "54826106"
 
 adc0 = machine.ADC(machine.Pin(26))
 adc1 = machine.ADC(machine.Pin(27))
@@ -305,11 +305,14 @@ def start_server():
 
     except Exception as e:
         print("exception: ", e)
-      
+        cl.send("HTTP/1.0 502 BAD GATEWAY\r\nContent-type: text/html\r\n\r\n")
+        link = "<a href='mcu.html'>back</a>"
+        cl.send("<html><head><title>Ressource nicht gefunden</title></head><body><h2>Exception: " + str(e) + "</h2><br><br>" + link + "</body></html>")
+        cl.close()
+        
         print("Used: ", gc.mem_alloc())
         print("Free: ", gc.mem_free())
-                
-        cl.close()
+        
         server.close()
         time.sleep(5)
                              
