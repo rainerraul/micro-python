@@ -305,7 +305,7 @@ def start_server():
 
     except Exception as e:
         print("exception: ", e)
-        cl.send("HTTP/1.0 502 BAD GATEWAY\r\nContent-type: text/html\r\n\r\n")
+        cl.send("HTTP/1.0 500 INTERNAL SERVER ERROR\r\nContent-type: text/html\r\n\r\n")
         link = "<a href='mcu.html'>back</a>"
         cl.send("<html><head><title>Ressource nicht gefunden</title></head><body><h2>Exception: " + str(e) + "</h2><br><br>" + link + "</body></html>")
         cl.close()
