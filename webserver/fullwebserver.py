@@ -5,8 +5,8 @@ import time
 import os
 import gc
 
-ssid = "kellerbereich"
-password = "54826106"
+ssid = "###########"
+password = "############"
 
 adc0 = machine.ADC(machine.Pin(26))
 adc1 = machine.ADC(machine.Pin(27))
